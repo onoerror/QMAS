@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">看你笨不笨</string>
 
-    <string name="question_1">請問\u00A0\u00A0\u00A0 \C + O\u00A0\u00A0\u00A0 的結果是?</string>
+    <string name="question_1">請問\u00A0\u00A0\u00A0 C + O\u00A0\u00A0\u00A0 的結果是?</string>
 
     <string name="question_1_radio_a">\u00A0\u00A0一氧化碳</string>
     <string name="question_1_radio_b">\u00A0\u00A0二氧化碳</string>
