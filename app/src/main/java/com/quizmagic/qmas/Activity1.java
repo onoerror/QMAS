@@ -3,7 +3,6 @@ package com.quizmagic.qmas;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Html;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -34,11 +33,16 @@ public class Activity1 extends AppCompatActivity {
         m_radio_b = (RadioButton) findViewById(R.id.radio_b);
         m_radio_c = (RadioButton) findViewById(R.id.radio_c);
 
-        m_tv_no.setText("No.1");
-        m_tv_question.setText(Html.fromHtml(getString(R.string.question_1)));
-        m_radio_a.setText(Html.fromHtml(getString(R.string.question_1_radio_a)));
-        m_radio_b.setText(Html.fromHtml(getString(R.string.question_1_radio_b)));
-        m_radio_c.setText(Html.fromHtml(getString(R.string.question_1_radio_c)));
+        int index = 0;
+        String no = String.valueOf(index+1);
+        m_tv_no.setText(no);
+
+//        m_tv_no.setText("No.1");
+        QuestionAdapter adapter = QuestionAdapterFactory.getQuestionAdapter();
+        m_tv_question.setText(adapter.getQuestion(index));
+        m_radio_a.setText(adapter.getQuestionQptionsA(index));
+        m_radio_b.setText(adapter.getQuestionQptionsB(index));
+        m_radio_c.setText(adapter.getQuestionQptionsC(index));
     }
 
     public void next(View view){
